@@ -1,0 +1,17 @@
+# Don't track Python cache and VS Code settings
+__pycache__/
+*.pyc
+.vscode/
+
+# Ignore secret keys and credentials
+secret.key
+.streamlit/secrets.toml
+
+# Don't track system files
+.DS_Store
+Thumbs.db
+
+# If you use virtual environments
+venv/
+.env
+
