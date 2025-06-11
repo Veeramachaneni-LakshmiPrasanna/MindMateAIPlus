@@ -4,7 +4,7 @@ import json
 import datetime
 import os
 from encryptor import load_key, encrypt_message, decrypt_message
-from breathing import breathing_exercise
+from breathing import breathing_exercise 
 from certificate import generate_certificate
 from deep_translator import GoogleTranslator
 import matplotlib.pyplot as plt
