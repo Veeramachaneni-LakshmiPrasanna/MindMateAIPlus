@@ -1,6 +1,11 @@
-from cryptography.fernet import Fernet
+rom cryptography.fernet import Fernet
 
 def load_key():
+    def load_key():
+    if not os.path.exists("secret.key"):
+        key = Fernet.generate_key()
+        with open("secret.key", "wb") as f:
+            f.write(key)
     return open("secret.key", "rb").read()
 
 def encrypt_message(message, key):
