@@ -1,5 +1,4 @@
-﻿# MindMateAIPlus#
-
+﻿🧠 MindMate AI+
 MindMate AI+ is an AI-powered mental health journaling app built using Streamlit.
 It helps users reflect on emotions, track mood patterns, do breathing exercises, and earn wellness certificates — all with multilingual support and local encryption for privacy.
 
