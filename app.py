@@ -6,7 +6,7 @@ import os
 from encryptor import load_key, encrypt_message, decrypt_message
 from breathing import breathing_exercise
 from certificate import generate_certificate
-from googletrans import Translator
+from deep_translator import GoogleTranslator
 import matplotlib.pyplot as plt
 
 # Load OpenAI API Key
@@ -30,10 +30,12 @@ def save_entry(entry):
     data.append(entry)
     with open(entries_path, "w") as f:
         json.dump(data, f, indent=2)
-def translate_prompt(prompt, target_lang="en"):
-    translator = Translator()
-    result = translator.translate(prompt, dest=target_lang)
-    return result.text
+def translate_prompt(prompt, target_lang):
+    try:
+        translated = GoogleTranslator(source='auto', target=target_lang).translate(prompt)
+        return translated
+    except Exception as e:
+        return f"Translation failed: {str(e)}"
 def generate_journal(emotion, language):
     default_prompt = f"📝 Journaling Prompt: Reflect on a time you felt '{emotion}'. What led to that feeling? How did you handle it, and what did you learn?"
 
@@ -112,4 +114,9 @@ elif menu == "Download Certificate 🏅":
                 st.download_button("Download PDF", f, file_name="MindMate_Certificate.pdf")
     else:
         st.info("Journal at least 7 days to unlock your certificate!")
+if "OPENAI_API_KEY" in st.secrets:
+    openai.api_key = st.secrets[]
+    ai_enabled = True
+else:
+    ai_enabled = False
 
