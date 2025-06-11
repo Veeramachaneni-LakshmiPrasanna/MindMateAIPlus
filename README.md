@@ -1,5 +1,4 @@
 ﻿# MindMateAIPlus#
-# 🧠 MindMate AI+
 
 MindMate AI+ is an AI-powered mental health journaling app built with Streamlit.
 
@@ -16,11 +15,22 @@ MindMate AI+ is an AI-powered mental health journaling app built with Streamlit.
 
 ### 🚀 How to Run the App Locally
 
-```bash
-pip install -r requirements.txt
-python -m streamlit run app.py
+1. Clone the repository  
+2. Install required packages:
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-# MindMateAIPlus
-# MindMateAIPlus
-# MindMateAIPlus
-# MindMateAIPlus
+3. Create `.streamlit/secrets.toml` and add your OpenAI API key (optional):
+    ```toml
+    OPENAI_API_KEY = "your-api-key"
+    ```
+
+4. Run the app:
+    ```bash
+    python -m streamlit run app.py
+    ```
+
+✅ If no API key is provided, the app runs in demo mode without GPT.
+
+
