@@ -115,7 +115,7 @@ elif menu == "Download Certificate 🏅":
     else:
         st.info("Journal at least 7 days to unlock your certificate!")
 if "OPENAI_API_KEY" in st.secrets:
-    openai.api_key = st.secrets[]
+    openai.api_key = st.secrets["OPENAI_API_KEY"]
     ai_enabled = True
 else:
     ai_enabled = False
