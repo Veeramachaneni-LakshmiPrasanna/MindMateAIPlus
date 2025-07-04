@@ -10,7 +10,7 @@ from deep_translator import GoogleTranslator
 import matplotlib.pyplot as plt
 
 # Load OpenAI API Key
-openai.api_key = st.secrets["OPENAI_API_KEY"]
+openai.api_key = st.secrets.get("OPENAI_API_KEY", "")
 
 # Create journaling folder and file if not exists
 if not os.path.exists("journaling_data"):
