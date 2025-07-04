@@ -2,5 +2,6 @@ streamlit
 openai
 cryptography
 python-telegram-bot
-deep-translator==1.11.4
 fpdf
+deep-translator
+matplotlib
