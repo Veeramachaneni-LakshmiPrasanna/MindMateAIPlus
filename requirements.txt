@@ -2,5 +2,5 @@ streamlit
 openai
 cryptography
 python-telegram-bot
-googletrans==1.11.4
+deep-translator==4.0.0rc1
 fpdf
